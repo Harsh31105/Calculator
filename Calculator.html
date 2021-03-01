@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Calculator.css">
+</head>
+
+<body>
+    <div class="container">
+        <form name="Calci" class="calculator">
+            <input type="text" class="value" name="text" readonly>
+            <span class="num clear" onclick="Calci.text.value = ''">C</span>
+            <span class="num" onclick="document.Calci.text.value += '/'">/</span>
+            <span class="num" onclick="document.Calci.text.value += '*'">*</span>
+            <span class="num" onclick="document.Calci.text.value += '7'">7</span>
+            <span class="num" onclick="document.Calci.text.value += '8'">8</span>
+            <span class="num" onclick="document.Calci.text.value += '9'">9</span>
+            <span class="num" onclick="document.Calci.text.value += '-'">-</span>
+            <span class="num" onclick="document.Calci.text.value += '4'">4</span>
+            <span class="num" onclick="document.Calci.text.value += '5'">5</span>
+            <span class="num" onclick="document.Calci.text.value += '6'">6</span>
+            <span class="num plus" onclick="document.Calci.text.value += '+'">+</span>
+            <span class="num" onclick="document.Calci.text.value += '1'">1</span>
+            <span class="num" onclick="document.Calci.text.value += '2'">2</span>
+            <span class="num" onclick="document.Calci.text.value += '3'">3</span>
+            <span class="num" onclick="document.Calci.text.value += '0'">0</span>
+            <span class="num" onclick="document.Calci.text.value += '00'">00</span>
+            <span class="num" onclick="document.Calci.text.value += '.'">.</span>
+            <span class="num equal" onclick="document.Calci.text.value = eval(Calci.text.value)">=</span>
+        </form>
+    </div>
+    <script src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelector('.container'), {
+            max: 15,
+            speed: 400,
+            glare: true,
+        })
+    </script>
+</body>
+
+</html>
